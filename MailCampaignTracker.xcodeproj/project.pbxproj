@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */; };
+		9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185519F75B3E0092E140 /* Recipient.swift */; };
+		9A5A185819F75CA70092E140 /* groupOfRecipients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185719F75CA70092E140 /* groupOfRecipients.swift */; };
 		9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350E919F737120072C68B /* AppDelegate.swift */; };
 		9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350EB19F737120072C68B /* GroupMasterViewController.swift */; };
 		9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350ED19F737120072C68B /* GroupDetailViewController.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewController.swift; sourceTree = "<group>"; };
+		9A5A185519F75B3E0092E140 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		9A5A185719F75CA70092E140 /* groupOfRecipients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupOfRecipients.swift; sourceTree = "<group>"; };
 		9AD350E419F737120072C68B /* MailCampaignTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCampaignTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD350E819F737120072C68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD350E919F737120072C68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 				9AD3510D19F737280072C68B /* Campaign.swift */,
 				9AD3510E19F737280072C68B /* MaterialItem.swift */,
 				9AD3510F19F737280072C68B /* Materials.swift */,
+				9A5A185519F75B3E0092E140 /* Recipient.swift */,
+				9A5A185719F75CA70092E140 /* groupOfRecipients.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				9AD350EB19F737120072C68B /* GroupMasterViewController.swift */,
 				9AD350ED19F737120072C68B /* GroupDetailViewController.swift */,
 				9AD3511719F73A200072C68B /* GroupTableViewCell.swift */,
+				9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -251,7 +260,10 @@
 			files = (
 				9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */,
 				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
+				9A5A185819F75CA70092E140 /* groupOfRecipients.swift in Sources */,
 				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
+				9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */,
+				9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */,
 				9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */,
 				9AD3511119F737280072C68B /* Groups.swift in Sources */,
 				9AD3511419F737280072C68B /* Materials.swift in Sources */,
@@ -451,6 +463,7 @@
 				9AD3510719F737120072C68B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AD3510819F737120072C68B /* Build configuration list for PBXNativeTarget "MailCampaignTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +472,7 @@
 				9AD3510A19F737120072C68B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

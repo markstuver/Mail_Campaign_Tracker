@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D8622E8-34E7-42B3-B33C-CD320EB5A920</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MailCampaignTracker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7A5B545BE0D079D73B1B08B30FCBE1B68C8B8DAB</key>
+		<string>github.com:markstuver/Mail_Campaign_Tracker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MailCampaignTracker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7A5B545BE0D079D73B1B08B30FCBE1B68C8B8DAB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:markstuver/Mail_Campaign_Tracker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7A5B545BE0D079D73B1B08B30FCBE1B68C8B8DAB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A5B545BE0D079D73B1B08B30FCBE1B68C8B8DAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MailCampaignTracker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
