@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350E919F737120072C68B /* AppDelegate.swift */; };
-		9AD350EC19F737120072C68B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350EB19F737120072C68B /* MasterViewController.swift */; };
-		9AD350EE19F737120072C68B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350ED19F737120072C68B /* DetailViewController.swift */; };
+		9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350EB19F737120072C68B /* GroupMasterViewController.swift */; };
+		9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350ED19F737120072C68B /* GroupDetailViewController.swift */; };
 		9AD350F119F737120072C68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD350EF19F737120072C68B /* Main.storyboard */; };
 		9AD350F319F737120072C68B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD350F219F737120072C68B /* Images.xcassets */; };
 		9AD350F619F737120072C68B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD350F419F737120072C68B /* LaunchScreen.xib */; };
 		9AD3510219F737120072C68B /* MailCampaignTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510119F737120072C68B /* MailCampaignTrackerTests.swift */; };
+		9AD3511019F737280072C68B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510B19F737280072C68B /* Date.swift */; };
+		9AD3511119F737280072C68B /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510C19F737280072C68B /* Groups.swift */; };
+		9AD3511219F737280072C68B /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510D19F737280072C68B /* Campaign.swift */; };
+		9AD3511319F737280072C68B /* MaterialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510E19F737280072C68B /* MaterialItem.swift */; };
+		9AD3511419F737280072C68B /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510F19F737280072C68B /* Materials.swift */; };
+		9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3511719F73A200072C68B /* GroupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +36,20 @@
 		9AD350E419F737120072C68B /* MailCampaignTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCampaignTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD350E819F737120072C68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD350E919F737120072C68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9AD350EB19F737120072C68B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		9AD350ED19F737120072C68B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9AD350EB19F737120072C68B /* GroupMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMasterViewController.swift; sourceTree = "<group>"; };
+		9AD350ED19F737120072C68B /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		9AD350F019F737120072C68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AD350F219F737120072C68B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AD350F519F737120072C68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9AD350FB19F737120072C68B /* MailCampaignTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailCampaignTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD3510019F737120072C68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD3510119F737120072C68B /* MailCampaignTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCampaignTrackerTests.swift; sourceTree = "<group>"; };
+		9AD3510B19F737280072C68B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		9AD3510C19F737280072C68B /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		9AD3510D19F737280072C68B /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		9AD3510E19F737280072C68B /* MaterialItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItem.swift; sourceTree = "<group>"; };
+		9AD3510F19F737280072C68B /* Materials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
+		9AD3511719F73A200072C68B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +91,12 @@
 		9AD350E619F737120072C68B /* MailCampaignTracker */ = {
 			isa = PBXGroup;
 			children = (
-				9AD350E919F737120072C68B /* AppDelegate.swift */,
-				9AD350EB19F737120072C68B /* MasterViewController.swift */,
-				9AD350ED19F737120072C68B /* DetailViewController.swift */,
+				9AD3511519F739D40072C68B /* Model */,
+				9AD3511619F739E10072C68B /* ViewController */,
 				9AD350EF19F737120072C68B /* Main.storyboard */,
 				9AD350F219F737120072C68B /* Images.xcassets */,
 				9AD350F419F737120072C68B /* LaunchScreen.xib */,
+				9AD350E919F737120072C68B /* AppDelegate.swift */,
 				9AD350E719F737120072C68B /* Supporting Files */,
 			);
 			path = MailCampaignTracker;
@@ -113,6 +125,28 @@
 				9AD3510019F737120072C68B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AD3511519F739D40072C68B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AD3510B19F737280072C68B /* Date.swift */,
+				9AD3510C19F737280072C68B /* Groups.swift */,
+				9AD3510D19F737280072C68B /* Campaign.swift */,
+				9AD3510E19F737280072C68B /* MaterialItem.swift */,
+				9AD3510F19F737280072C68B /* Materials.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9AD3511619F739E10072C68B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9AD350EB19F737120072C68B /* GroupMasterViewController.swift */,
+				9AD350ED19F737120072C68B /* GroupDetailViewController.swift */,
+				9AD3511719F73A200072C68B /* GroupTableViewCell.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD350EE19F737120072C68B /* DetailViewController.swift in Sources */,
-				9AD350EC19F737120072C68B /* MasterViewController.swift in Sources */,
+				9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */,
+				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
+				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
 				9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */,
+				9AD3511119F737280072C68B /* Groups.swift in Sources */,
+				9AD3511419F737280072C68B /* Materials.swift in Sources */,
+				9AD3511019F737280072C68B /* Date.swift in Sources */,
+				9AD3511319F737280072C68B /* MaterialItem.swift in Sources */,
+				9AD3511219F737280072C68B /* Campaign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
