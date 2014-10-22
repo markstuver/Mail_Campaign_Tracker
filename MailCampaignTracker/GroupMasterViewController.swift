@@ -14,8 +14,9 @@ class GroupMasterViewController: UITableViewController {
     var groupDetailViewController: GroupDetailViewController? = nil
     var objects = NSMutableArray()
     
-// Create an array of Campaign Groups
-    var mailCampaigns = Groups.createGroup()
+// Create an array of Groups
+    var arrayOfGroups = Groups.createGroup()
+    
 
 
     override func awakeFromNib() {
@@ -26,6 +27,7 @@ class GroupMasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         // Set TableView's Row Height
         self.tableView.rowHeight = 70.0
@@ -59,58 +61,63 @@ class GroupMasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mailCampaigns.count //objects.count
+        return arrayOfGroups.count //objects.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
+        
         //let object = objects[indexPath.row] as NSDate
         //cell.textLabel.text = object.description
         
         // Create instance and set to the current campaign
-        let campaign = mailCampaigns[indexPath.row] as Campaign
+        let currentGroup = arrayOfGroups[indexPath.row] as Group
         
         // Set cell Labels
-        cell.textLabel.text = campaign.title
-        cell.detailTextLabel?.text = "Date Mailed: \(campaign.dateGroupCreated)"
+        cell.textLabel.text = currentGroup.name
         
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
 
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//           // objects.removeObjectAtIndex(indexPath.row)
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//        } else if editingStyle == .Insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//        }
+//    }
     
     
 // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                
-                //let object = objects[indexPath.row] as NSDate
-                
-                let campaign = mailCampaigns[indexPath.row] as Campaign
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            
+                //let object = objects[indexPath.row] as NSDate                
+    
+                let currentGroup = arrayOfGroups[indexPath!.row] as Group
                 
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as GroupDetailViewController
-                controller.campaignItem = campaign
+            
+                controller.currentGroup = currentGroup
+            
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
-            }
+            
         }
     }
-
+    
+    
 
 
 }

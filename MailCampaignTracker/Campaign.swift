@@ -12,11 +12,9 @@ import Foundation
 struct Campaign {
     
     var title = ""
-    var location = ""
-    var dateGroupCreated = ""
-    var dateMailed = ""
-    var type = ""
+    var dateSent = ""
+    var courierUsed = ""
     var notes = ""
-    var materialsSent:[Materials] = []
+    var materialsSent:[Materials]?
     
 }

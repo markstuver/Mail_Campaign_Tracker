@@ -9,16 +9,16 @@
 import UIKit
 
 class GroupDetailViewController: UIViewController {
-
-    @IBOutlet weak var groupDetailDescriptionLabel: UILabel!
     
-    @IBOutlet weak var campaignTitleLabel: UILabel!
-    @IBOutlet weak var campaignTypeLabel: UILabel!
+    
+    @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var dateCreatedLabel: UILabel!
+    @IBOutlet weak var groupDescriptionLabel: UILabel!
+    @IBOutlet weak var customerTypeLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
-    @IBOutlet weak var recipientNumberLabel: UILabel!
     
-    var campaignItem: Campaign? {
+    
+    var currentGroup: Group? {
         didSet {
             // Update the view.
             self.configureView()
@@ -27,16 +27,16 @@ class GroupDetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the campaign item.
-        if let detail: Campaign = self.campaignItem {
-            if let label = self.campaignTitleLabel {
+        if let groupDetail: Group = self.currentGroup {
+            
+            self.title = "\(groupDetail.name) Details"
                 
-                label.text = campaignItem?.title
-                self.campaignTypeLabel.text = campaignItem?.type
-                self.dateCreatedLabel.text = campaignItem?.dateGroupCreated
-                self.notesLabel.text = campaignItem?.notes
-                
-                
-            }
+            self.groupNameLabel?.text = groupDetail.name
+            self.groupDescriptionLabel?.text = groupDetail.description
+            self.customerTypeLabel?.text = groupDetail.customerType
+            self.dateCreatedLabel?.text = groupDetail.dateCreated
+            self.notesLabel?.text = groupDetail.notes
+            
         }
     }
 
@@ -51,7 +51,39 @@ class GroupDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        //Create instance array of the views that are connected to the ContainerView
+        let containerView = segue.destinationViewController.childViewControllers
+        
+        //Create instance of the first index (0) in the containerView
+        let navigationVC = containerView[0] as UINavigationController
+        
+        // Create instance and set to the first VC in the navigationVC's stack
+        let destinationVC = navigationVC.viewControllers.first as RecipientsTableViewController
+        
+        // Verify that destinationVC is of the correct class
+        if destinationVC.isKindOfClass(RecipientsTableViewController) == true {
+            
+            destinationVC.testStringFromRecipientsTBVC = "I think this is going to work... FINALLYYYYYYYYYY"
+            
+        }
+        
+        
+        
+        
+        
+
+        //println("destinationContainerView: \(destinationContainerView)")
+        println("containerView: \(containerView[1])")
+
+        
+        
+        
+    }
 
 }
 

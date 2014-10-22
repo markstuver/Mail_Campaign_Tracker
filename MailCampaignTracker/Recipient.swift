@@ -10,15 +10,16 @@ import Foundation
 
 struct Recipient {
     
-    var companyName = ""
-    var contactFirstName = ""
-    var contactLastName = ""
-    var contactName = ""
+    var name = ""
+    var firstName = ""
+    var lastName = ""
     var address1 = ""
     var address2 = ""
     var city = ""
     var state = ""
     var zipcode = 00000
     var customerType = ""
+    var groups:[Group]?
+    
     
 }

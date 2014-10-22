@@ -10,11 +10,17 @@ import UIKit
 
 class RecipientsTableViewController: UITableViewController {
     
-   var recipients = groupOfRecipients()
+   var recipients = Recipients.createRecipients()
+    
+    var testStringFromRecipientsTBVC = ""
+    
+    var arrayOfCampaigns: [Campaign]?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    self.title = "some"
         
 //        println("\(recipients)")
         // Uncomment the following line to preserve selection between presentations
@@ -34,21 +40,23 @@ class RecipientsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 1
+        return 3
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RecipientCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RCell", forIndexPath: indexPath) as UITableViewCell
+        
 
-        // Configure the cell...
-
+        cell.textLabel.text = "Is this thing on?"
+        
+        
         return cell
     }
 

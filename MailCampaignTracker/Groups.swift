@@ -10,56 +10,24 @@ import Foundation
 
 class Groups {
     
-    class func createGroup()-> [Campaign] {
+    
+    class func createGroup()-> [Group] {
         
-        var group1 = Campaign()
-        group1.title = "CANA 2013"
-        group1.location = ""
-        group1.dateGroupCreated = Date.dateMailingCreated(isDateTodays: false)
-        group1.type = "CANA"
-        group1.notes = "Sent to attendees selected by Mark Pennington"
-        group1.dateMailed = ""
+        var arrayOfCampaigns = Campaigns.createCampaign()
+        var arrayOfMaterials = Materials.setOfMailingMaterials()
+        var arrayOfRecipients = Recipients.createRecipients()
+
         
-        var group2 = Campaign()
-        group2.title = "CANA 2014"
-        group2.location = ""
-        group2.dateGroupCreated = Date.dateMailingCreated(isDateTodays: true)
-        group2.type = "CANA"
-        group2.notes = "Sent to attendees selected by Mark Pennington"
-        group2.dateMailed = ""
+        var group1 = Group(name: "CANA", description: "Members of the Cremation Association of North America", customerType: "Prospects", dateCreated: "10/11/14", notes: "", dateOfLastCampaign: "10/14/14", numberOfRecipients: 110, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
-        var group3 = Campaign()
-        group3.title = "Hawaii Funeral Homes"
-        group3.location = "Hawaii Funeral Homes"
-        group3.dateGroupCreated = Date.dateMailingCreated(isDateTodays: false)
-        group3.type = "Prospects"
-        group3.notes = "Sent to funeral homes selected by Mark Pennington"
-        group3.dateMailed = ""
+        var group2 = Group(name: "VFC", description: "Veterans Funeral Care", customerType: "Funeral Homes w/ Discounts", dateCreated: "10/11/14", notes: "Veterans Funeral Care Network headed by Jim Rudolph", dateOfLastCampaign: "10/14/14", numberOfRecipients: 140, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
-        var group4 = Campaign()
-        group4.title = "ICCFA 2010"
-        group4.location = "Houston, TX"
-        group4.dateGroupCreated = Date.dateMailingCreated(isDateTodays: true)
-        group4.type = "ICCFA"
-        group4.notes = "Sent to attendees selected by Mark Pennington"
-        group4.dateMailed = ""
+        var group3 = Group(name: "YB News", description: "Clients that ordered through the YB Advertisments", customerType: "Prospects", dateCreated: "10/09/14", notes: "Most recipients made only one purchase at the time of the ad", dateOfLastCampaign: "10/19/14", numberOfRecipients: 105, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
+        var group4 = Group(name: "Distributors", description: "Current Distributors", customerType: "Current", dateCreated: "10/19/14", notes: "Current Distributors that are in MAS90", dateOfLastCampaign: "10/23/14", numberOfRecipients: 200, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
         var groupsArray = [group1, group2, group3, group4]
         
         return groupsArray
-    
     }
-    
-
-
-        
-    
-    
-    
-    
-    
 }
-
-
-

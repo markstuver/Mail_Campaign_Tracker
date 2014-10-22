@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */; };
 		9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185519F75B3E0092E140 /* Recipient.swift */; };
-		9A5A185819F75CA70092E140 /* groupOfRecipients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185719F75CA70092E140 /* groupOfRecipients.swift */; };
 		9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350E919F737120072C68B /* AppDelegate.swift */; };
 		9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350EB19F737120072C68B /* GroupMasterViewController.swift */; };
 		9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350ED19F737120072C68B /* GroupDetailViewController.swift */; };
@@ -20,9 +19,12 @@
 		9AD3511019F737280072C68B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510B19F737280072C68B /* Date.swift */; };
 		9AD3511119F737280072C68B /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510C19F737280072C68B /* Groups.swift */; };
 		9AD3511219F737280072C68B /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510D19F737280072C68B /* Campaign.swift */; };
-		9AD3511319F737280072C68B /* MaterialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510E19F737280072C68B /* MaterialItem.swift */; };
 		9AD3511419F737280072C68B /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510F19F737280072C68B /* Materials.swift */; };
 		9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3511719F73A200072C68B /* GroupTableViewCell.swift */; };
+		C1ACB62F19F82D150022B962 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB62E19F82D150022B962 /* Group.swift */; };
+		C1ACB63119F832770022B962 /* Campaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63019F832770022B962 /* Campaigns.swift */; };
+		C1ACB63319F835BF0022B962 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63219F835BF0022B962 /* Material.swift */; };
+		C1ACB63519F83E0B0022B962 /* Recipients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63419F83E0B0022B962 /* Recipients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 /* Begin PBXFileReference section */
 		9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewController.swift; sourceTree = "<group>"; };
 		9A5A185519F75B3E0092E140 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
-		9A5A185719F75CA70092E140 /* groupOfRecipients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupOfRecipients.swift; sourceTree = "<group>"; };
 		9AD350E419F737120072C68B /* MailCampaignTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCampaignTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD350E819F737120072C68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD350E919F737120072C68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +54,12 @@
 		9AD3510B19F737280072C68B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9AD3510C19F737280072C68B /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		9AD3510D19F737280072C68B /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
-		9AD3510E19F737280072C68B /* MaterialItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItem.swift; sourceTree = "<group>"; };
 		9AD3510F19F737280072C68B /* Materials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
 		9AD3511719F73A200072C68B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		C1ACB62E19F82D150022B962 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		C1ACB63019F832770022B962 /* Campaigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaigns.swift; sourceTree = "<group>"; };
+		C1ACB63219F835BF0022B962 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		C1ACB63419F83E0B0022B962 /* Recipients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +142,13 @@
 			children = (
 				9AD3510B19F737280072C68B /* Date.swift */,
 				9AD3510C19F737280072C68B /* Groups.swift */,
+				C1ACB62E19F82D150022B962 /* Group.swift */,
 				9AD3510D19F737280072C68B /* Campaign.swift */,
-				9AD3510E19F737280072C68B /* MaterialItem.swift */,
+				C1ACB63019F832770022B962 /* Campaigns.swift */,
+				C1ACB63219F835BF0022B962 /* Material.swift */,
 				9AD3510F19F737280072C68B /* Materials.swift */,
 				9A5A185519F75B3E0092E140 /* Recipient.swift */,
-				9A5A185719F75CA70092E140 /* groupOfRecipients.swift */,
+				C1ACB63419F83E0B0022B962 /* Recipients.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,16 +265,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */,
+				C1ACB63119F832770022B962 /* Campaigns.swift in Sources */,
 				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
-				9A5A185819F75CA70092E140 /* groupOfRecipients.swift in Sources */,
 				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
 				9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */,
+				C1ACB63519F83E0B0022B962 /* Recipients.swift in Sources */,
 				9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */,
+				C1ACB62F19F82D150022B962 /* Group.swift in Sources */,
 				9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */,
 				9AD3511119F737280072C68B /* Groups.swift in Sources */,
+				C1ACB63319F835BF0022B962 /* Material.swift in Sources */,
 				9AD3511419F737280072C68B /* Materials.swift in Sources */,
 				9AD3511019F737280072C68B /* Date.swift in Sources */,
-				9AD3511319F737280072C68B /* MaterialItem.swift in Sources */,
 				9AD3511219F737280072C68B /* Campaign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
