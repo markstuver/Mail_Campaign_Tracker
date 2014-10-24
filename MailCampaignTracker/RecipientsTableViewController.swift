@@ -17,7 +17,8 @@ class RecipientsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    self.title = "some"
+        
+        self.title = "Recipients/Members"
         
 //        println("\(recipients)")
         // Uncomment the following line to preserve selection between presentations
@@ -41,26 +42,28 @@ class RecipientsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
-        // Grab the currentGroup's recipients array
-        let currentGroupsRecipients = self.currentGroup?.recipients
-        return currentGroupsRecipients!.count
+        
+        // Call helper fuction to grab recipients array
+        return grabCurrentGroupsRecipients().count
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RCell", forIndexPath: indexPath) as UITableViewCell
         
-        let currentGroupsRecipients = self.currentGroup?.recipients
-        return c
+        let currentGroupsRecipients = grabCurrentGroupsRecipients()
         
 
-        cell.textLabel.text =
+        cell.textLabel.text = currentGroupsRecipients[indexPath.row].name
         
+        let contactFullName = "\(currentGroupsRecipients[indexPath.row].firstName) \(currentGroupsRecipients[indexPath.row].lastName)"
+        
+        cell.detailTextLabel?.text = contactFullName
         
         return cell
     }
-
+    
+   
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -96,18 +99,48 @@ class RecipientsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        var destinationVC = segue.destinationViewController as RecipientDetailViewController
+        
+        if destinationVC.isKindOfClass(RecipientDetailViewController) {
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+
+            var currentRecipient = currentGroup?.recipients![indexPath!.row]
+            
+            println("\(currentRecipient!)")
+         //   destinationVC.currentRecipient = currentRecipient?
+        }
     }
-    */
     
-    
-    // HELPER FUNC
     
 
+    
+    
+    
+    //MARK: - Helper Functions
+    
+    // This function is called to get the currentGroup's recipient array
+    func grabCurrentGroupsRecipients() -> [Recipient] {
+        
+        var currentRecipients = self.currentGroup?.recipients
+        
+        if currentRecipients != nil {
+            
+            return currentRecipients!
+        }
+        else {
+        
+            var tempRecipient = [Recipient]()
+            
+            return tempRecipient
+        }
+    }
+    
+    
 }

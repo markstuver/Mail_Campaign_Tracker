@@ -26,7 +26,7 @@ class GroupDetailViewController: UIViewController {
     }
 
     func configureView() {
-        // Update the user interface for the campaign item.
+        // Update the user interface for the Group.
         if let groupDetail: Group = self.currentGroup {
             
             self.title = "\(groupDetail.name) Details"
@@ -36,7 +36,6 @@ class GroupDetailViewController: UIViewController {
             self.customerTypeLabel?.text = groupDetail.customerType
             self.dateCreatedLabel?.text = groupDetail.dateCreated
             self.notesLabel?.text = groupDetail.notes
-            
         }
     }
 
@@ -51,6 +50,9 @@ class GroupDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
     
 
@@ -71,19 +73,7 @@ class GroupDetailViewController: UIViewController {
             //Set DestinationVC's currentGroup equal to this VC's current Group
             destinationVC.currentGroup = self.currentGroup
         }
-        
-        
-        
-        
-        
-
-        //println("destinationContainerView: \(destinationContainerView)")
-        println("containerView: \(containerView[1])")
-
-        
-        
-        
     }
-
+    
 }
 
