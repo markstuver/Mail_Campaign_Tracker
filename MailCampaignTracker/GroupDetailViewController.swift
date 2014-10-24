@@ -68,8 +68,8 @@ class GroupDetailViewController: UIViewController {
         // Verify that destinationVC is of the correct class
         if destinationVC.isKindOfClass(RecipientsTableViewController) == true {
             
-            destinationVC.testStringFromRecipientsTBVC = "I think this is going to work... FINALLYYYYYYYYYY"
-            
+            //Set DestinationVC's currentGroup equal to this VC's current Group
+            destinationVC.currentGroup = self.currentGroup
         }
         
         

@@ -10,13 +10,10 @@ import UIKit
 
 class RecipientsTableViewController: UITableViewController {
     
-   var recipients = Recipients.createRecipients()
+   
+    // Create Instance of Group to receive the current group from the GroupDetailVC
+    var currentGroup:Group?
     
-    var testStringFromRecipientsTBVC = ""
-    
-    var arrayOfCampaigns: [Campaign]?
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,17 +41,21 @@ class RecipientsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 3
+        // Grab the currentGroup's recipients array
+        let currentGroupsRecipients = self.currentGroup?.recipients
+        return currentGroupsRecipients!.count
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RCell", forIndexPath: indexPath) as UITableViewCell
         
+        let currentGroupsRecipients = self.currentGroup?.recipients
+        return c
+        
 
-        cell.textLabel.text = "Is this thing on?"
+        cell.textLabel.text =
         
         
         return cell
@@ -104,5 +105,9 @@ class RecipientsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // HELPER FUNC
+    
 
 }

@@ -18,7 +18,7 @@ class Groups {
         var arrayOfRecipients = Recipients.createRecipients()
 
         
-        var group1 = Group(name: "CANA", description: "Members of the Cremation Association of North America", customerType: "Prospects", dateCreated: "10/11/14", notes: "", dateOfLastCampaign: "10/14/14", numberOfRecipients: 110, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
+        var group1 = Group(name: "CANA", description: "Members of the Cremation Association of North America", customerType: "Prospects", dateCreated: "10/11/14", notes: "This not is a long note because I am check this not to make sure that the note label is long enough to be used for a large note... notes.... notes..... notes......... ok, i'm done!", dateOfLastCampaign: "10/14/14", numberOfRecipients: 110, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
         var group2 = Group(name: "VFC", description: "Veterans Funeral Care", customerType: "Funeral Homes w/ Discounts", dateCreated: "10/11/14", notes: "Veterans Funeral Care Network headed by Jim Rudolph", dateOfLastCampaign: "10/14/14", numberOfRecipients: 140, recipients: arrayOfRecipients, campaigns: arrayOfCampaigns, materialSent: arrayOfMaterials)
         
