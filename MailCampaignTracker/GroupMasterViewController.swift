@@ -113,9 +113,9 @@ class GroupMasterViewController: UITableViewController {
             
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
-            
         }
     }
+
     
     
 

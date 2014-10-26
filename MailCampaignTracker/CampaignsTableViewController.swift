@@ -1,45 +1,24 @@
 //
-//  RecipientsTableViewController.swift
+//  CampaignsTableViewController.swift
 //  MailCampaignTracker
 //
-//  Created by Mark Stuver on 10/21/14.
+//  Created by Mark Stuver on 10/25/14.
 //  Copyright (c) 2014 Mark Stuver. All rights reserved.
 //
 
 import UIKit
 
-@protocol RecipientsTableViewControllerDelegate {
+class CampaignsTableViewController: UITableViewController {
 
-    var currentGroup:Group?
-    
-}
-
-
-class RecipientsTableViewController: UITableViewController {
-    
-    var delegate:RecipientsTableViewControllerDelegate? = nil
-    
-   
-    // Create Instance of Group to receive the current group from the GroupDetailVC
-    var currentGroup:Group?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let indexPath = self.tableView.indexPathForSelectedRow()
-        var currentRecipient = grabCurrentGroupsRecipients()
-        
-        
-        self.title = "Recipients/Members"
-        
-//        println("\(recipients)")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,32 +30,25 @@ class RecipientsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // Call helper fuction to grab recipients array
-        return grabCurrentGroupsRecipients().count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 0
     }
 
-
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RCell", forIndexPath: indexPath) as UITableViewCell
-        
-        let currentGroupsRecipients = grabCurrentGroupsRecipients()
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
-        cell.textLabel.text = currentGroupsRecipients[indexPath.row].name
-        
-        let contactFullName = "\(currentGroupsRecipients[indexPath.row].firstName) \(currentGroupsRecipients[indexPath.row].lastName)"
-        
-        cell.detailTextLabel?.text = contactFullName
-        
+        // Configure the cell...
+
         return cell
     }
-    
-   
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -112,55 +84,14 @@ class RecipientsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        var destinationVC = segue.destinationViewController as RecipientDetailViewController
-        
-        if segue.identifier == "RecipientDetail" {
-            
-            if destinationVC.isKindOfClass(RecipientDetailViewController) {
-                                
-            let currentIndexPath = self.tableView.indexPathForSelectedRow()
-            println("Current IndexPath: \(currentIndexPath)")
-
-           let currentGroupOfRecipients:[Recipient] = grabCurrentGroupsRecipients()
-            
-           let currentRecipient = currentGroupOfRecipients[currentIndexPath!.row] as Recipient
-                
-                println("\(currentRecipient.name)")
-                
-               destinationVC.currentRecipient = currentRecipient
-            }
-        }
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
     }
-    
-    
+    */
 
-    
-    
-    
-    //MARK: - Helper Functions
-    
-    // This function is called to get the currentGroup's recipient array
-    func grabCurrentGroupsRecipients() -> [Recipient] {
-        
-        var currentRecipients = self.currentGroup?.recipients
-        
-        if currentRecipients != nil {
-            
-            return currentRecipients!
-        }
-        else {
-        
-            var tempRecipient = [Recipient]()
-            
-            return tempRecipient
-        }
-    }
-    
-    
 }

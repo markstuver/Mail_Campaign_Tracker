@@ -10,12 +10,25 @@ import UIKit
 
 class RecipientDetailViewController: UIViewController {
     
-    let currentRecipient = Recipient?()
+    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var zipLabel: UILabel!
+    @IBOutlet weak var customerTypeLabel: UILabel!
+    @IBOutlet weak var groupLabel: UILabel!
+    
+    
+    var currentRecipient: Recipient!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        //self.title = "\(currentRecipient!.name)"
         
-        self.title = \(currentRecipient.fu
+        configureView()
 
         // Do any additional setup after loading the view.
     }
@@ -23,6 +36,27 @@ class RecipientDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func configureView() {
+        // Update the user interface for the Group.
+        if let recipientDetail = self.currentRecipient {
+            
+            print("\(recipientDetail.name)")
+            
+            self.title = "\(recipientDetail.name) Details"
+
+            self.contactNameLabel.text = "\(recipientDetail.firstName) \(recipientDetail.lastName)"
+            
+            self.companyLabel.text = recipientDetail.name
+            self.addressLabel.text = recipientDetail.address1
+            self.cityLabel.text = recipientDetail.city
+            self.stateLabel.text = recipientDetail.state
+            self.zipLabel.text = "\(recipientDetail.zipcode)"
+            self.customerTypeLabel.text = recipientDetail.customerType
+        }
     }
     
 
