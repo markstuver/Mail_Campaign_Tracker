@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol GroupDetailVCDelegate {
+    
+    func sendDataToVC(info:String)
+}
+
 class GroupDetailViewController: UIViewController {
     
     @IBOutlet weak var groupNameLabel: UILabel!
@@ -16,7 +21,9 @@ class GroupDetailViewController: UIViewController {
     @IBOutlet weak var customerTypeLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
     
-    var currentGroup: Group? {
+    var delegate:GroupDetailVCDelegate? = nil
+    
+        var currentGroup: Group? {
         didSet {
             // Update the view.
             self.configureView()
@@ -26,6 +33,14 @@ class GroupDetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the Group.
         if let groupDetail: Group = self.currentGroup {
+            
+            if delegate != nil {
+                
+                let information:String = "Howdy Neighbor!!"
+                delegate!.sendDataToVC(information)
+                
+            }
+            
             
             self.title = "\(groupDetail.name) Details"
                 
@@ -40,6 +55,8 @@ class GroupDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
         self.configureView()
     }
 
@@ -48,34 +65,59 @@ class GroupDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func printSomething() {
+        println("printSomething Protocol Method has been executed!!")
+    }
+    
+    func sendCurrentGroup()-> Group {
+        
+        return currentGroup!
+    }
+    
+
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
+        
 //        //Create instance array of the views that are connected to the ContainerView
-//        let containerView = segue.destinationViewController.childViewControllers
+//        let containerView: AnyObject = segue.destinationViewController.childViewControllers.last!
 //        println("Views in containerView: \(containerView)")
-//        
-//        //Create instance of the first index (0) in the containerView
-//        let navigationOneVC = containerView[0] as UINavigationController
-//        
-//        //Create instance of the first index (1) in the containerView
-//        let navigationTwoVC = containerView[1] as UINavigationController
-//        
-//        // Create instance and set to the first VC in the navigationVC's stack
-//        let destinationOneVC = navigationOneVC.viewControllers.first as RecipientsTableViewController
-//        
-//        // Create instance and set to the first VC in the navigationVC's stack
-//        let destinationTwoVC = navigationTwoVC.viewControllers.first as CampaignsTableViewController
-//        
-//        
-//        // Verify that destinationVC is of the correct class
-//        if destinationOneVC.isKindOfClass(RecipientsTableViewController) {
-//            
-//            println("Segue to CampaignsTableViewController")
-//
-//            //Set DestinationVC's currentGroup equal to this VC's current Group
-//            //destinationOneVC.currentGroup = self.currentGroup
-//        }
-//        
+        
+        //Create instance array of the views that are connected to the ContainerView
+        let navigationRecipientVC: AnyObject = segue.destinationViewController.childViewControllers.last!
+        println("Views in containerView: \(navigationRecipientVC)")
+        
+        let destinationVC: AnyObject = navigationRecipientVC.childViewControllers.first!
+        println("Views in destinationVC: \(destinationVC)")
+        
+        println("TabBar Item: \(destinationVC.viewControllers.description!)")
+        
+       // if navigationRecipientVC.tabBarItem.description
+
+        
+        //Create instance of the first index (0) in the containerView
+      // let navigationRecipientsVC = containerView[0] as UINavigationController
+
+        //Create instance of the first index (1) in the containerView
+      //  let navigationCampaignVC = containerView[1] as UINavigationController
+        
+        // Create instance and set to the first VC in the navigationVC's stack
+       // let destinationRecipientVC = navigationRecipientsVC. as RecipientsTableViewController
+        
+        // Create instance and set to the first VC in the navigationVC's stack
+        //let destinationTwoVC = navigationTwoVC.viewControllers.first as CampaignsTableViewController
+        
+        
+        // Verify that destinationVC is of the correct class
+     //   if destinationOneVC.isKindOfClass(RecipientsTableViewController) {
+            
+       //     println("Segue to RecipientsTableViewController")
+
+            //Set DestinationVC's currentGroup equal to this VC's current Group
+            //destinationOneVC.currentGroup = self.currentGroup
+      //  }
+        
 //        else if destinationTwoVC.isKindOfClass(CampaignsTableViewController) {
 //            
 //            println("Segue to CampaignsTableViewController")            

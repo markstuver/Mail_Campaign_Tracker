@@ -1021,7 +1021,7 @@
         <!--Recipients-->
         <scene sceneID="icE-Fx-V0Q">
             <objects>
-                <navigationController storyboardIdentifier="Recipients" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Esy-mw-bsp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Story" automaticallyAdjustsScrollViewInsets="NO" id="Esy-mw-bsp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recipients" id="cgA-SQ-Ifc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XBe-eF-p6r">

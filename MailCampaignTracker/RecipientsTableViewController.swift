@@ -8,25 +8,19 @@
 
 import UIKit
 
-@protocol RecipientsTableViewControllerDelegate {
 
-    var currentGroup:Group?
-    
-}
+class RecipientsTableViewController: UITableViewController, GroupDetailVCDelegate {
 
-
-class RecipientsTableViewController: UITableViewController {
     
-    var delegate:RecipientsTableViewControllerDelegate? = nil
     
-   
     // Create Instance of Group to receive the current group from the GroupDetailVC
     var currentGroup:Group?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let indexPath = self.tableView.indexPathForSelectedRow()
+        
+       let indexPath = self.tableView.indexPathForSelectedRow()
         var currentRecipient = grabCurrentGroupsRecipients()
         
         
@@ -39,12 +33,23 @@ class RecipientsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-
-    override func didReceiveMemoryWarning() {
+    
+    
+    func sendDataToVC(info: String) {
+        println(info)
+    }
+    
+    
+    
+    
+    
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+
 
     // MARK: - Table view data source
 
@@ -148,7 +153,13 @@ class RecipientsTableViewController: UITableViewController {
     // This function is called to get the currentGroup's recipient array
     func grabCurrentGroupsRecipients() -> [Recipient] {
         
-        var currentRecipients = self.currentGroup?.recipients
+        println("grabCurrentGroupsRecipients() has executed!")
+        
+        let delegateVC = GroupDetailViewController()
+        delegateVC.delegate = self
+        println("RecipientTableViewController has been assigned as the delegate")
+        
+        var currentRecipients = currentGroup?.recipients
         
         if currentRecipients != nil {
             
