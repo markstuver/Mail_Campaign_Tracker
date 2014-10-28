@@ -10,6 +10,7 @@
 		9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */; };
 		9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A185519F75B3E0092E140 /* Recipient.swift */; };
 		9AC4E95419F9FEA4008CA82E /* RecipientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4E95319F9FEA4008CA82E /* RecipientDetailViewController.swift */; };
+		9AD2ED4D19FF2D1300379EAF /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2ED4C19FF2D1300379EAF /* CampaignDetailViewController.swift */; };
 		9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350E919F737120072C68B /* AppDelegate.swift */; };
 		9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350EB19F737120072C68B /* GroupMasterViewController.swift */; };
 		9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD350ED19F737120072C68B /* GroupDetailViewController.swift */; };
@@ -21,7 +22,12 @@
 		9AD3511119F737280072C68B /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510C19F737280072C68B /* Groups.swift */; };
 		9AD3511219F737280072C68B /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510D19F737280072C68B /* Campaign.swift */; };
 		9AD3511419F737280072C68B /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3510F19F737280072C68B /* Materials.swift */; };
-		9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3511719F73A200072C68B /* GroupTableViewCell.swift */; };
+		9AE9593019FF36DE00CBCB95 /* RecipientEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9592F19FF36DE00CBCB95 /* RecipientEditViewController.swift */; };
+		9AE9593219FF36F700CBCB95 /* CampaignEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9593119FF36F700CBCB95 /* CampaignEditViewController.swift */; };
+		9AE9593419FF370A00CBCB95 /* MaterialEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9593319FF370A00CBCB95 /* MaterialEditViewController.swift */; };
+		9AE9593919FF376900CBCB95 /* MaterialsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9593819FF376900CBCB95 /* MaterialsCollectionViewController.swift */; };
+		9AE9593B19FF378F00CBCB95 /* MaterialsDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9593A19FF378F00CBCB95 /* MaterialsDetalViewController.swift */; };
+		9AE9593D19FF37A800CBCB95 /* MaterialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9593C19FF37A800CBCB95 /* MaterialsCollectionViewCell.swift */; };
 		C188F46519FC70BC006AA89A /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C188F46419FC70BC006AA89A /* CampaignsTableViewController.swift */; };
 		C1ACB62F19F82D150022B962 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB62E19F82D150022B962 /* Group.swift */; };
 		C1ACB63119F832770022B962 /* Campaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63019F832770022B962 /* Campaigns.swift */; };
@@ -43,6 +49,7 @@
 		9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewController.swift; sourceTree = "<group>"; };
 		9A5A185519F75B3E0092E140 /* Recipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
 		9AC4E95319F9FEA4008CA82E /* RecipientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientDetailViewController.swift; sourceTree = "<group>"; };
+		9AD2ED4C19FF2D1300379EAF /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
 		9AD350E419F737120072C68B /* MailCampaignTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCampaignTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD350E819F737120072C68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD350E919F737120072C68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +65,12 @@
 		9AD3510C19F737280072C68B /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		9AD3510D19F737280072C68B /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		9AD3510F19F737280072C68B /* Materials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
-		9AD3511719F73A200072C68B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		9AE9592F19FF36DE00CBCB95 /* RecipientEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientEditViewController.swift; sourceTree = "<group>"; };
+		9AE9593119FF36F700CBCB95 /* CampaignEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignEditViewController.swift; sourceTree = "<group>"; };
+		9AE9593319FF370A00CBCB95 /* MaterialEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialEditViewController.swift; sourceTree = "<group>"; };
+		9AE9593819FF376900CBCB95 /* MaterialsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialsCollectionViewController.swift; sourceTree = "<group>"; };
+		9AE9593A19FF378F00CBCB95 /* MaterialsDetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialsDetalViewController.swift; sourceTree = "<group>"; };
+		9AE9593C19FF37A800CBCB95 /* MaterialsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C188F46419FC70BC006AA89A /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
 		C1ACB62E19F82D150022B962 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		C1ACB63019F832770022B962 /* Campaigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaigns.swift; sourceTree = "<group>"; };
@@ -162,12 +174,42 @@
 			children = (
 				9AD350EB19F737120072C68B /* GroupMasterViewController.swift */,
 				9AD350ED19F737120072C68B /* GroupDetailViewController.swift */,
-				9AD3511719F73A200072C68B /* GroupTableViewCell.swift */,
-				9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */,
-				9AC4E95319F9FEA4008CA82E /* RecipientDetailViewController.swift */,
-				C188F46419FC70BC006AA89A /* CampaignsTableViewController.swift */,
+				9AE9593519FF372D00CBCB95 /* Recipients */,
+				9AE9593619FF374300CBCB95 /* Campaigns */,
+				9AE9593719FF374F00CBCB95 /* Materials */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9AE9593519FF372D00CBCB95 /* Recipients */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */,
+				9AC4E95319F9FEA4008CA82E /* RecipientDetailViewController.swift */,
+				9AE9592F19FF36DE00CBCB95 /* RecipientEditViewController.swift */,
+			);
+			name = Recipients;
+			sourceTree = "<group>";
+		};
+		9AE9593619FF374300CBCB95 /* Campaigns */ = {
+			isa = PBXGroup;
+			children = (
+				C188F46419FC70BC006AA89A /* CampaignsTableViewController.swift */,
+				9AD2ED4C19FF2D1300379EAF /* CampaignDetailViewController.swift */,
+				9AE9593119FF36F700CBCB95 /* CampaignEditViewController.swift */,
+			);
+			name = Campaigns;
+			sourceTree = "<group>";
+		};
+		9AE9593719FF374F00CBCB95 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				9AE9593819FF376900CBCB95 /* MaterialsCollectionViewController.swift */,
+				9AE9593319FF370A00CBCB95 /* MaterialEditViewController.swift */,
+				9AE9593A19FF378F00CBCB95 /* MaterialsDetalViewController.swift */,
+				9AE9593C19FF37A800CBCB95 /* MaterialsCollectionViewCell.swift */,
+			);
+			name = Materials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,17 +312,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD3511819F73A200072C68B /* GroupTableViewCell.swift in Sources */,
 				C1ACB63119F832770022B962 /* Campaigns.swift in Sources */,
 				9AC4E95419F9FEA4008CA82E /* RecipientDetailViewController.swift in Sources */,
+				9AE9593019FF36DE00CBCB95 /* RecipientEditViewController.swift in Sources */,
 				C188F46519FC70BC006AA89A /* CampaignsTableViewController.swift in Sources */,
 				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
 				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
 				9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */,
+				9AE9593D19FF37A800CBCB95 /* MaterialsCollectionViewCell.swift in Sources */,
+				9AE9593919FF376900CBCB95 /* MaterialsCollectionViewController.swift in Sources */,
 				C1ACB63519F83E0B0022B962 /* Recipients.swift in Sources */,
+				9AE9593B19FF378F00CBCB95 /* MaterialsDetalViewController.swift in Sources */,
+				9AE9593419FF370A00CBCB95 /* MaterialEditViewController.swift in Sources */,
+				9AE9593219FF36F700CBCB95 /* CampaignEditViewController.swift in Sources */,
 				9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */,
 				C1ACB62F19F82D150022B962 /* Group.swift in Sources */,
 				9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */,
+				9AD2ED4D19FF2D1300379EAF /* CampaignDetailViewController.swift in Sources */,
 				9AD3511119F737280072C68B /* Groups.swift in Sources */,
 				C1ACB63319F835BF0022B962 /* Material.swift in Sources */,
 				9AD3511419F737280072C68B /* Materials.swift in Sources */,

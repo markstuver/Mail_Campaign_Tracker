@@ -8,12 +8,9 @@
 
 import UIKit
 
-protocol GroupDetailVCDelegate {
-    
-    func sendDataToVC(info:String)
-}
 
 class GroupDetailViewController: UIViewController {
+    
     
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var dateCreatedLabel: UILabel!
@@ -21,7 +18,6 @@ class GroupDetailViewController: UIViewController {
     @IBOutlet weak var customerTypeLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
     
-    var delegate:GroupDetailVCDelegate? = nil
     
         var currentGroup: Group? {
         didSet {
@@ -34,15 +30,8 @@ class GroupDetailViewController: UIViewController {
         // Update the user interface for the Group.
         if let groupDetail: Group = self.currentGroup {
             
-            if delegate != nil {
-                
-                let information:String = "Howdy Neighbor!!"
-                delegate!.sendDataToVC(information)
-                
-            }
             
-            
-            self.title = "\(groupDetail.name) Details"
+            self.title = "Group Details"
                 
             self.groupNameLabel?.text = groupDetail.name
             self.groupDescriptionLabel?.text = groupDetail.description
@@ -66,63 +55,40 @@ class GroupDetailViewController: UIViewController {
     }
     
     
-    func printSomething() {
-        println("printSomething Protocol Method has been executed!!")
-    }
-    
-    func sendCurrentGroup()-> Group {
-        
-        return currentGroup!
-    }
-    
-
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-//        //Create instance array of the views that are connected to the ContainerView
-//        let containerView: AnyObject = segue.destinationViewController.childViewControllers.last!
-//        println("Views in containerView: \(containerView)")
+       
+        //Create instance equal to the first UINavigationController in the chidViewControllers array
+        let navigationCampaignVC = segue.destinationViewController.childViewControllers.first! as UINavigationController
         
-        //Create instance array of the views that are connected to the ContainerView
-        let navigationRecipientVC: AnyObject = segue.destinationViewController.childViewControllers.last!
-        println("Views in containerView: \(navigationRecipientVC)")
+        let destinationCampaignVC = navigationCampaignVC.childViewControllers.last! as CampaignsTableViewController
         
-        let destinationVC: AnyObject = navigationRecipientVC.childViewControllers.first!
-        println("Views in destinationVC: \(destinationVC)")
+        //Create instance equal to the last UINavigationController in the chidViewControllers array
+        let navigationRecipientVC = segue.destinationViewController.childViewControllers[1] as UINavigationController
         
-        println("TabBar Item: \(destinationVC.viewControllers.description!)")
-        
-       // if navigationRecipientVC.tabBarItem.description
+        // Crate instance equal to the last index in the navigationRecipientVC array
+        let destinationRecipientVC = navigationRecipientVC.childViewControllers.last! as RecipientsTableViewController
 
         
-        //Create instance of the first index (0) in the containerView
-      // let navigationRecipientsVC = containerView[0] as UINavigationController
-
-        //Create instance of the first index (1) in the containerView
-      //  let navigationCampaignVC = containerView[1] as UINavigationController
-        
-        // Create instance and set to the first VC in the navigationVC's stack
-       // let destinationRecipientVC = navigationRecipientsVC. as RecipientsTableViewController
-        
-        // Create instance and set to the first VC in the navigationVC's stack
-        //let destinationTwoVC = navigationTwoVC.viewControllers.first as CampaignsTableViewController
-        
-        
-        // Verify that destinationVC is of the correct class
-     //   if destinationOneVC.isKindOfClass(RecipientsTableViewController) {
+        if destinationRecipientVC.isKindOfClass(RecipientsTableViewController) {
             
-       //     println("Segue to RecipientsTableViewController")
-
-            //Set DestinationVC's currentGroup equal to this VC's current Group
-            //destinationOneVC.currentGroup = self.currentGroup
-      //  }
+            destinationRecipientVC.currentGroup = self.currentGroup
+        }
+        else {
+            
+            println("Error! destinationRecipientVC is not of the correct class! See GroupDetailViewController")
+        }
         
-//        else if destinationTwoVC.isKindOfClass(CampaignsTableViewController) {
-//            
-//            println("Segue to CampaignsTableViewController")            
-//        }
-   }
+        if destinationCampaignVC.isKindOfClass(CampaignsTableViewController) {
+      
+            destinationCampaignVC.currentGroup = self.currentGroup
+        }
+        else {
+            println("Error! destinationCampaignVC is not of the correct class! See GroupDetailViewController")
+        }
+    }
+    
     
 }
 

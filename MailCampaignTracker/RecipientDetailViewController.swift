@@ -25,8 +25,6 @@ class RecipientDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        //self.title = "\(currentRecipient!.name)"
         
         configureView()
 
@@ -43,10 +41,8 @@ class RecipientDetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the Group.
         if let recipientDetail = self.currentRecipient {
-            
-            print("\(recipientDetail.name)")
-            
-            self.title = "\(recipientDetail.name) Details"
+                       
+            self.title = "\(recipientDetail.name)"
 
             self.contactNameLabel.text = "\(recipientDetail.firstName) \(recipientDetail.lastName)"
             

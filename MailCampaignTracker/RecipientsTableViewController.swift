@@ -9,7 +9,7 @@
 import UIKit
 
 
-class RecipientsTableViewController: UITableViewController, GroupDetailVCDelegate {
+class RecipientsTableViewController: UITableViewController {
 
     
     
@@ -24,23 +24,14 @@ class RecipientsTableViewController: UITableViewController, GroupDetailVCDelegat
         var currentRecipient = grabCurrentGroupsRecipients()
         
         
-        self.title = "Recipients/Members"
+        self.title = "Recipients"
         
-//        println("\(recipients)")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    
-    func sendDataToVC(info: String) {
-        println(info)
-    }
-    
-    
-    
     
     
         override func didReceiveMemoryWarning() {
@@ -128,17 +119,14 @@ class RecipientsTableViewController: UITableViewController, GroupDetailVCDelegat
         if segue.identifier == "RecipientDetail" {
             
             if destinationVC.isKindOfClass(RecipientDetailViewController) {
-                                
-            let currentIndexPath = self.tableView.indexPathForSelectedRow()
-            println("Current IndexPath: \(currentIndexPath)")
 
-           let currentGroupOfRecipients:[Recipient] = grabCurrentGroupsRecipients()
-            
-           let currentRecipient = currentGroupOfRecipients[currentIndexPath!.row] as Recipient
+                let currentIndexPath = self.tableView.indexPathForSelectedRow()
+           
+                let currentGroupOfRecipients:[Recipient] = grabCurrentGroupsRecipients()
                 
-                println("\(currentRecipient.name)")
+                let currentRecipient = currentGroupOfRecipients[currentIndexPath!.row] as Recipient
                 
-               destinationVC.currentRecipient = currentRecipient
+                destinationVC.currentRecipient = currentRecipient
             }
         }
     }
@@ -152,13 +140,7 @@ class RecipientsTableViewController: UITableViewController, GroupDetailVCDelegat
     
     // This function is called to get the currentGroup's recipient array
     func grabCurrentGroupsRecipients() -> [Recipient] {
-        
-        println("grabCurrentGroupsRecipients() has executed!")
-        
-        let delegateVC = GroupDetailViewController()
-        delegateVC.delegate = self
-        println("RecipientTableViewController has been assigned as the delegate")
-        
+      
         var currentRecipients = currentGroup?.recipients
         
         if currentRecipients != nil {
