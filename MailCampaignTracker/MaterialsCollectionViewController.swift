@@ -11,6 +11,9 @@ import UIKit
 let reuseIdentifier = "Cell"
 
 class MaterialsCollectionViewController: UICollectionViewController {
+    
+    // Instance of Group that will be set to the group instance passed from GroupDetailVC
+    var currentGroup:Group?
 
     override func viewDidLoad() {
         super.viewDidLoad()

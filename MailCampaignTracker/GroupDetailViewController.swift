@@ -58,36 +58,60 @@ class GroupDetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-       
-        //Create instance equal to the first UINavigationController in the chidViewControllers array
-        let navigationCampaignVC = segue.destinationViewController.childViewControllers.first! as UINavigationController
+        // Create instance of an array that contains the childVCs of the destinationVC
+        var navControllers = segue.destinationViewController.childViewControllers
         
-        let destinationCampaignVC = navigationCampaignVC.childViewControllers.last! as CampaignsTableViewController
-        
-        //Create instance equal to the last UINavigationController in the chidViewControllers array
-        let navigationRecipientVC = segue.destinationViewController.childViewControllers[1] as UINavigationController
-        
-        // Crate instance equal to the last index in the navigationRecipientVC array
-        let destinationRecipientVC = navigationRecipientVC.childViewControllers.last! as RecipientsTableViewController
+        // Iterate through the items in navControllers
+        for var i = 0; i < navControllers.count; i++ {
+            
+            // Create variable that is equal to the navController at the the i index
+            var currentNavController: AnyObject = navControllers[i]
+            
+            // Create instance of an array that contains the childVCs of the current navController
+            var viewControllers = currentNavController.childViewControllers
+            
+            // Iterate through the items in viewControllers
+            for var s = 0; s < viewControllers.count; s++ {
+                
+                // Create variable that is equal to the viewController at the s index
+                var currentViewController: AnyObject = viewControllers[s]
+                
+                // If the currentVC's class is RecipientsTBVC
+                if currentViewController.isKindOfClass(RecipientsTableViewController) {
 
-        
-        if destinationRecipientVC.isKindOfClass(RecipientsTableViewController) {
-            
-            destinationRecipientVC.currentGroup = self.currentGroup
-        }
-        else {
-            
-            println("Error! destinationRecipientVC is not of the correct class! See GroupDetailViewController")
-        }
-        
-        if destinationCampaignVC.isKindOfClass(CampaignsTableViewController) {
-      
-            destinationCampaignVC.currentGroup = self.currentGroup
-        }
-        else {
-            println("Error! destinationCampaignVC is not of the correct class! See GroupDetailViewController")
+                    // Create instance of the VC and cast as the RecipientTBVC
+                    var destinationVC = currentViewController as RecipientsTableViewController
+                    
+                    // Set destinationVC's currentGroup equal to this VC's currentGroup
+                    destinationVC.currentGroup = self.currentGroup
+                }
+                    
+                    // If the currentVC's class is CampaignsTBVC
+                   else if currentViewController.isKindOfClass(CampaignsTableViewController) {
+                        
+                        // Create instance of the VC and cast as the CampaignsTBVC
+                        var destinationVC = currentViewController as CampaignsTableViewController
+                        
+                        // Set destinationVC's currentGroup equal to this VC's currentGroup
+                        destinationVC.currentGroup = self.currentGroup
+                
+                }
+                    
+                    // If the currentVC's class is MaterialsCollectionVC
+                else if currentViewController.isKindOfClass(MaterialsCollectionViewController) {
+                    
+                    // Create instance of the VC and cast as the MaterialsCollectionVC
+                    var destinationVC = currentViewController as MaterialsCollectionViewController
+                    
+                    // Set destinationVC's currentGroup equal to this VC's currentGroup
+                    destinationVC.currentGroup = self.currentGroup
+                }
+            }
         }
     }
+
+    
+    
     
     
 }

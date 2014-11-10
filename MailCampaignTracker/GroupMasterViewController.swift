@@ -33,12 +33,12 @@ class GroupMasterViewController: UITableViewController {
         self.tableView.rowHeight = 70.0
         
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-        let controllers = self.splitViewController!.viewControllers
-        self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+//
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+//        self.navigationItem.rightBarButtonItem = addButton
+//        let controllers = self.splitViewController!.viewControllers
+//        self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,11 +47,11 @@ class GroupMasterViewController: UITableViewController {
     }
 
 // INSERT NEW OBJECT
-    func insertNewObject(sender: AnyObject) {
-        objects.insertObject(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
+//    func insertNewObject(sender: AnyObject) {
+//        objects.insertObject(NSDate(), atIndex: 0)
+//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//    }
 
 
 // MARK: - Table View

@@ -33,6 +33,12 @@
 		C1ACB63119F832770022B962 /* Campaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63019F832770022B962 /* Campaigns.swift */; };
 		C1ACB63319F835BF0022B962 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63219F835BF0022B962 /* Material.swift */; };
 		C1ACB63519F83E0B0022B962 /* Recipients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACB63419F83E0B0022B962 /* Recipients.swift */; };
+		C1C6457B1A1019A100949FE3 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6457A1A1019A100949FE3 /* AddGroupViewController.swift */; };
+		C1C6457D1A101CFC00949FE3 /* AddCampaignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6457C1A101CFC00949FE3 /* AddCampaignViewController.swift */; };
+		C1C6457F1A101FC100949FE3 /* CustomerTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6457E1A101FC100949FE3 /* CustomerTypePicker.swift */; };
+		C1C645811A10246300949FE3 /* CustomerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C645801A10246300949FE3 /* CustomerTypes.swift */; };
+		C1C645851A10256600949FE3 /* customerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C645841A10256600949FE3 /* customerType.swift */; };
+		C1C78B131A09C25800FE8543 /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C78B121A09C25800FE8543 /* AddRecipientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,12 @@
 		C1ACB63019F832770022B962 /* Campaigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaigns.swift; sourceTree = "<group>"; };
 		C1ACB63219F835BF0022B962 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		C1ACB63419F83E0B0022B962 /* Recipients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipients.swift; sourceTree = "<group>"; };
+		C1C6457A1A1019A100949FE3 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
+		C1C6457C1A101CFC00949FE3 /* AddCampaignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCampaignViewController.swift; sourceTree = "<group>"; };
+		C1C6457E1A101FC100949FE3 /* CustomerTypePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTypePicker.swift; sourceTree = "<group>"; };
+		C1C645801A10246300949FE3 /* CustomerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTypes.swift; sourceTree = "<group>"; };
+		C1C645841A10256600949FE3 /* customerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerType.swift; sourceTree = "<group>"; };
+		C1C78B121A09C25800FE8543 /* AddRecipientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +177,8 @@
 				9AD3510F19F737280072C68B /* Materials.swift */,
 				9A5A185519F75B3E0092E140 /* Recipient.swift */,
 				C1ACB63419F83E0B0022B962 /* Recipients.swift */,
+				C1C645841A10256600949FE3 /* customerType.swift */,
+				C1C645801A10246300949FE3 /* CustomerTypes.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -172,6 +186,8 @@
 		9AD3511619F739E10072C68B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C1C6457E1A101FC100949FE3 /* CustomerTypePicker.swift */,
+				C1C6457A1A1019A100949FE3 /* AddGroupViewController.swift */,
 				9AD350EB19F737120072C68B /* GroupMasterViewController.swift */,
 				9AD350ED19F737120072C68B /* GroupDetailViewController.swift */,
 				9AE9593519FF372D00CBCB95 /* Recipients */,
@@ -184,6 +200,7 @@
 		9AE9593519FF372D00CBCB95 /* Recipients */ = {
 			isa = PBXGroup;
 			children = (
+				C1C78B121A09C25800FE8543 /* AddRecipientViewController.swift */,
 				9A5A185319F75AE30092E140 /* RecipientsTableViewController.swift */,
 				9AC4E95319F9FEA4008CA82E /* RecipientDetailViewController.swift */,
 				9AE9592F19FF36DE00CBCB95 /* RecipientEditViewController.swift */,
@@ -194,6 +211,7 @@
 		9AE9593619FF374300CBCB95 /* Campaigns */ = {
 			isa = PBXGroup;
 			children = (
+				C1C6457C1A101CFC00949FE3 /* AddCampaignViewController.swift */,
 				C188F46419FC70BC006AA89A /* CampaignsTableViewController.swift */,
 				9AD2ED4C19FF2D1300379EAF /* CampaignDetailViewController.swift */,
 				9AE9593119FF36F700CBCB95 /* CampaignEditViewController.swift */,
@@ -316,6 +334,8 @@
 				9AC4E95419F9FEA4008CA82E /* RecipientDetailViewController.swift in Sources */,
 				9AE9593019FF36DE00CBCB95 /* RecipientEditViewController.swift in Sources */,
 				C188F46519FC70BC006AA89A /* CampaignsTableViewController.swift in Sources */,
+				C1C645811A10246300949FE3 /* CustomerTypes.swift in Sources */,
+				C1C6457B1A1019A100949FE3 /* AddGroupViewController.swift in Sources */,
 				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
 				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
 				9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */,
@@ -324,14 +344,18 @@
 				C1ACB63519F83E0B0022B962 /* Recipients.swift in Sources */,
 				9AE9593B19FF378F00CBCB95 /* MaterialsDetalViewController.swift in Sources */,
 				9AE9593419FF370A00CBCB95 /* MaterialEditViewController.swift in Sources */,
+				C1C6457D1A101CFC00949FE3 /* AddCampaignViewController.swift in Sources */,
 				9AE9593219FF36F700CBCB95 /* CampaignEditViewController.swift in Sources */,
 				9A5A185419F75AE30092E140 /* RecipientsTableViewController.swift in Sources */,
 				C1ACB62F19F82D150022B962 /* Group.swift in Sources */,
+				C1C6457F1A101FC100949FE3 /* CustomerTypePicker.swift in Sources */,
 				9AD350EA19F737120072C68B /* AppDelegate.swift in Sources */,
 				9AD2ED4D19FF2D1300379EAF /* CampaignDetailViewController.swift in Sources */,
 				9AD3511119F737280072C68B /* Groups.swift in Sources */,
 				C1ACB63319F835BF0022B962 /* Material.swift in Sources */,
 				9AD3511419F737280072C68B /* Materials.swift in Sources */,
+				C1C78B131A09C25800FE8543 /* AddRecipientViewController.swift in Sources */,
+				C1C645851A10256600949FE3 /* customerType.swift in Sources */,
 				9AD3511019F737280072C68B /* Date.swift in Sources */,
 				9AD3511219F737280072C68B /* Campaign.swift in Sources */,
 			);

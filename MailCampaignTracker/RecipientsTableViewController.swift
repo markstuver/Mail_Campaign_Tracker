@@ -9,19 +9,22 @@
 import UIKit
 
 
-class RecipientsTableViewController: UITableViewController {
+class RecipientsTableViewController: UITableViewController, RecipientAddDelegate {
 
     
     
     // Create Instance of Group to receive the current group from the GroupDetailVC
     var currentGroup:Group?
+    var currentRecipient:Recipient?
+    var currentString:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
        let indexPath = self.tableView.indexPathForSelectedRow()
-        var currentRecipient = grabCurrentGroupsRecipients()
+       var currentRecipient = grabCurrentGroupsRecipients()
         
         
         self.title = "Recipients"
@@ -30,7 +33,7 @@ class RecipientsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
     
     
@@ -40,6 +43,16 @@ class RecipientsTableViewController: UITableViewController {
     }
     
     
+
+    /// Call delegate method from EditVC
+    func recipientAddButtonPressed(controller: RecipientEditViewController, addedRecipient:String) {
+        
+        println("recipientAddButtomPressed has reached the RecipientTBVC")
+        
+        self.currentString = addedRecipient
+        
+        controller.navigationController?.popViewControllerAnimated(true)
+    }
 
 
     // MARK: - Table view data source
@@ -63,7 +76,7 @@ class RecipientsTableViewController: UITableViewController {
         let currentGroupsRecipients = grabCurrentGroupsRecipients()
         
 
-        cell.textLabel.text = currentGroupsRecipients[indexPath.row].name
+        cell.textLabel.text = currentString//currentGroupsRecipients[indexPath.row].name
         
         let contactFullName = "\(currentGroupsRecipients[indexPath.row].firstName) \(currentGroupsRecipients[indexPath.row].lastName)"
         
@@ -73,15 +86,15 @@ class RecipientsTableViewController: UITableViewController {
     }
     
    
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -91,22 +104,22 @@ class RecipientsTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
 
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     
     // MARK: - Navigation
@@ -114,23 +127,51 @@ class RecipientsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var destinationVC = segue.destinationViewController as RecipientDetailViewController
-        
-        if segue.identifier == "RecipientDetail" {
+        if segue.destinationViewController.isKindOfClass(RecipientDetailViewController) {
             
-            if destinationVC.isKindOfClass(RecipientDetailViewController) {
-
+            var destinationVC = segue.destinationViewController as RecipientDetailViewController
+            
+            if segue.identifier == "RecipientDetail" {
+                
                 let currentIndexPath = self.tableView.indexPathForSelectedRow()
-           
+                
                 let currentGroupOfRecipients:[Recipient] = grabCurrentGroupsRecipients()
                 
                 let currentRecipient = currentGroupOfRecipients[currentIndexPath!.row] as Recipient
                 
                 destinationVC.currentRecipient = currentRecipient
             }
+
         }
-    }
+        
+        else if segue.destinationViewController.isKindOfClass(RecipientEditViewController) {
+            
+            if segue.identifier == "AddRecipient" {
+                
+            var destinationVC = segue.destinationViewController as RecipientEditViewController
+                
+                destinationVC.delegateAdd = self
+                
+                println("Yeah!! Look at me!!")
+                
+                /// Set the destinationVC's delegate to self (this VC)
+               // destinationVC.delegateAdd = self
+                
+               //                let currentIndexPath = self.tableView.indexPathForSelectedRow()
+//                
+//                let currentGroupOfRecipients:[Recipient] = grabCurrentGroupsRecipients()
+//                
+//                let currentRecipient = currentGroupOfRecipients[currentIndexPath!.row] as Recipient
+//                
+//                destinationVC.currentRecipient = currentRecipient
+            
+        
+            }
     
+        }
+    
+    }
+
     
 
     
