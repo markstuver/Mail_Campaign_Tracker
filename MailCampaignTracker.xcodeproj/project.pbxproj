@@ -179,12 +179,9 @@
 				9AD3510F19F737280072C68B /* Materials.swift */,
 				9A5A185519F75B3E0092E140 /* Recipient.swift */,
 				C1ACB63419F83E0B0022B962 /* Recipients.swift */,
-<<<<<<< Updated upstream
 				C1C645841A10256600949FE3 /* customerType.swift */,
 				C1C645801A10246300949FE3 /* CustomerTypes.swift */,
-=======
 				9A1C2E521A185CDF00BB5A9E /* LoadSaveFromPlist.swift */,
->>>>>>> Stashed changes
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -340,12 +337,9 @@
 				9AC4E95419F9FEA4008CA82E /* RecipientDetailViewController.swift in Sources */,
 				9AE9593019FF36DE00CBCB95 /* RecipientEditViewController.swift in Sources */,
 				C188F46519FC70BC006AA89A /* CampaignsTableViewController.swift in Sources */,
-<<<<<<< Updated upstream
 				C1C645811A10246300949FE3 /* CustomerTypes.swift in Sources */,
 				C1C6457B1A1019A100949FE3 /* AddGroupViewController.swift in Sources */,
-=======
 				9A1C2E531A185CDF00BB5A9E /* LoadSaveFromPlist.swift in Sources */,
->>>>>>> Stashed changes
 				9AD350EE19F737120072C68B /* GroupDetailViewController.swift in Sources */,
 				9AD350EC19F737120072C68B /* GroupMasterViewController.swift in Sources */,
 				9A5A185619F75B3E0092E140 /* Recipient.swift in Sources */,
