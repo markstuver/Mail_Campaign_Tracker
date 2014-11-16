@@ -8,9 +8,11 @@
 
 import UIKit
 
-let reuseIdentifier = "Cell"
 
 class MaterialsCollectionViewController: UICollectionViewController {
+    
+    let reuseIdentifier = "Cell"
+    
     
     // Instance of Group that will be set to the group instance passed from GroupDetailVC
     var currentGroup:Group?
@@ -58,6 +60,7 @@ class MaterialsCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath) as UICollectionViewCell
     
+        
         cell.backgroundColor = UIColor.purpleColor()
         
         return cell
