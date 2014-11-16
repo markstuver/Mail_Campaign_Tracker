@@ -17,8 +17,6 @@ class GroupMasterViewController: UITableViewController {
 // Create an array of Groups
     var arrayOfGroups = Groups.createGroup()
     
-
-
     override func awakeFromNib() {
         super.awakeFromNib()
         self.clearsSelectionOnViewWillAppear = false
@@ -27,18 +25,35 @@ class GroupMasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LoadSavePlist.loadDataFromPlist()
     
-
         // Set TableView's Row Height
         self.tableView.rowHeight = 70.0
         
+        // create constant equal to the ...DirectoriesInDomains Array
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as Array
         
+        // Create constant equal to the string object at the 0 index of the paths Array
+        let documentDirectory = paths[0] as String
+        
+<<<<<<< Updated upstream
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 //
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton
 //        let controllers = self.splitViewController!.viewControllers
 //        self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
+=======
+        println("Document Directory: \(documentDirectory)")
+
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
+        let controllers = self.splitViewController!.viewControllers
+        self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
+>>>>>>> Stashed changes
     }
 
     override func didReceiveMemoryWarning() {
