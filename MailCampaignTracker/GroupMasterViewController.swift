@@ -25,7 +25,7 @@ class GroupMasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         LoadSavePlist.loadDataFromPlist()
     
         // Set TableView's Row Height
@@ -37,23 +37,24 @@ class GroupMasterViewController: UITableViewController {
         // Create constant equal to the string object at the 0 index of the paths Array
         let documentDirectory = paths[0] as String
         
-<<<<<<< Updated upstream
+
+            
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 //
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+//       let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton
 //        let controllers = self.splitViewController!.viewControllers
 //        self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
-=======
+
         println("Document Directory: \(documentDirectory)")
 
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+//        self.navigationItem.rightBarButtonItem = addButton
         let controllers = self.splitViewController!.viewControllers
         self.groupDetailViewController = controllers[controllers.count-1].topViewController as? GroupDetailViewController
->>>>>>> Stashed changes
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +62,7 @@ class GroupMasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-// INSERT NEW OBJECT
+//INSERT NEW OBJECT
 //    func insertNewObject(sender: AnyObject) {
 //        objects.insertObject(NSDate(), atIndex: 0)
 //        let indexPath = NSIndexPath(forRow: 0, inSection: 0)

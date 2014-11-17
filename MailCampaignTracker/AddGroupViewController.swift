@@ -47,6 +47,17 @@ class AddGroupViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
 
     @IBAction func addGroupButtonPressed(sender: AnyObject) {
+        
+        self.addNewGroupToPlist()
+        
+        
+        
+        
+        // Dismiss addGroupVC view
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+        
+        
     }
     /*
     // MARK: - Navigation
@@ -82,6 +93,56 @@ class AddGroupViewController: UIViewController, UIPickerViewDataSource, UIPicker
         let currentType = customerTypeLabels[row]
        // testLabel.text = currentType.title
     }
+    
+    
+    
+    func addNewGroupToPlist() {
+        
+        var dictionaryOfNewGroupInfo : [String:String] = ["GroupName":self.groupNameTextField.text, "Discription":self.descriptionTextField.text, "CustomerType": "", "DateCreated":""]
+        
+        var arrayOfGroupsFromPlist = LoadSavePlist.loadDataFromPlist()
+        
+        arrayOfGroupsFromPlist += dictionaryOfNewGroupInfo
+        
+        
+        exsistingGroupsFromPlist =
+        
+        
+        LoadSavePlist.saveDataToPlist(<#dataToSave: [AnyObject]#>)
+        
+        
+        
+        println("\(exsistingGroupsFromPlist.description)")
+        println("\(dictionaryOfNewGroupInfo.description)")
+
+    }
+    
+//    -(void)AddTaskToSavedTasks
+//    {
+//    /// Create instance of NSDictionary and load with values from textField, textView & date picked
+//    NSDictionary *dictionary = @{TASK_NAME: self.taskNameTextField.text, TASK_DETAIL : self.taskDetailTextView.text, TASK_DATE : self.taskDatePicker.date};
+//    
+//    /// Create mutableArray from the exsisting tasks in NSUserDefaults
+//    NSMutableArray *tasksAddedAsPropertyList =
+//    [[[NSUserDefaults standardUserDefaults] ///returns NSUserDefaults propertylist with current saved tasks
+//    arrayForKey:ADDED_TASK_TO_PLIST] ///get array from ADDED_TASK_TO_PLIST key in returned propertyList
+//    mutableCopy]; ///make a mutable copy of the array to set it as the value of the mutableArray
+//    
+//    /// if tasksAddedAsPropertyList has not been created... create it.
+//    if (!tasksAddedAsPropertyList) {
+//    tasksAddedAsPropertyList = [[NSMutableArray alloc] init];
+//    }
+//    /// if already created... do this:
+//    ///add the dictionary to the tasksAddedAsPropertyList array
+//    [tasksAddedAsPropertyList addObject:dictionary];
+//    
+//    /// Set the tasksAddedAsPropertyList array as an object in the NSUserDefaults
+//    [[NSUserDefaults standardUserDefaults] setObject:tasksAddedAsPropertyList forKey:ADDED_TASK_TO_PLIST];
+//    
+//    /// Save the data to the NSUserDefault
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    }
+
 
 
 

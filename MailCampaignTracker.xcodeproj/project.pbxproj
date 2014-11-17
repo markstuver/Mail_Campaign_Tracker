@@ -40,6 +40,7 @@
 		C1C645811A10246300949FE3 /* CustomerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C645801A10246300949FE3 /* CustomerTypes.swift */; };
 		C1C645851A10256600949FE3 /* customerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C645841A10256600949FE3 /* customerType.swift */; };
 		C1C78B131A09C25800FE8543 /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C78B121A09C25800FE8543 /* AddRecipientViewController.swift */; };
+		C1CC46F31A19537300441DAF /* defaultFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1CC46F21A19537300441DAF /* defaultFile.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		C1C645801A10246300949FE3 /* CustomerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTypes.swift; sourceTree = "<group>"; };
 		C1C645841A10256600949FE3 /* customerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerType.swift; sourceTree = "<group>"; };
 		C1C78B121A09C25800FE8543 /* AddRecipientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
+		C1CC46F21A19537300441DAF /* defaultFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultFile.plist; path = Images.xcassets/defaultFile.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD350E819F737120072C68B /* Info.plist */,
+				C1CC46F21A19537300441DAF /* defaultFile.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CC46F31A19537300441DAF /* defaultFile.plist in Resources */,
 				9AD350F119F737120072C68B /* Main.storyboard in Resources */,
 				9AD350F619F737120072C68B /* LaunchScreen.xib in Resources */,
 				9AD350F319F737120072C68B /* Images.xcassets in Resources */,

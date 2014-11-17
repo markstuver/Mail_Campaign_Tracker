@@ -11,18 +11,15 @@ import Foundation
 // Use this class to call it's class methods that will load and save data to a plist
 class LoadSavePlist {
     
+    
     // MARK: - Load Data Function
-    class func loadDataFromPlist() -> [AnyObject] {
+    class func loadDataFromPlist() -> [[String:String]] {
         
         // using helper method, grab the directory/filename
         let fileAtPath = self.grabPlistPath()
         
-        println("fileAtPath: \(fileAtPath)")
-
-        
         // Load data from plist into an Array
-        let arrayData = NSArray(contentsOfFile: fileAtPath) as [AnyObject]
-        
+        var arrayData : [String:String] = NSArray(contentsOfFile: fileAtPath)
         
         // Return Array
         return arrayData
@@ -30,13 +27,13 @@ class LoadSavePlist {
     
     
     // MARK: - Save Data Function
-    class func saveDataToPlist(dataToSave:[AnyObject]){
+    class func saveDataToPlist(dataToSave:[[String:String]]){
         
         // using helper method, grab the directory/filename
         let filePath = self.grabPlistPath()
         
         // load current data from plist
-        let currentFileData = self.loadDataFromPlist()
+        let currentFileData: [String:String] = self.loadDataFromPlist()
         
         // create new array equal to the data in the plist and the data passed into the function, cast as NSArray
         var newFileData = (currentFileData + dataToSave) as NSArray
@@ -55,11 +52,9 @@ class LoadSavePlist {
         
         // Create constant equal to the string object at the 0 index of the paths Array
         let documentDirectory = paths[0] as String
-        
-        println("Document Directory: \(documentDirectory)")
-        
+       
         // Create constant equal to the filename MyDataFile.plist
-        let path = documentDirectory.stringByAppendingPathComponent("providedData.plist")
+        let path = documentDirectory.stringByAppendingPathComponent("groupData.plist")
         
         // Create instant of the NSFileManager which returns the shared object
         let  fileManager = NSFileManager.defaultManager()
@@ -78,23 +73,19 @@ class LoadSavePlist {
                 
                 // Copy the defaultFile.plist's data to the MyDataFile.plist
                 fileManager.copyItemAtPath(bundle!, toPath: path, error: &fileCopyError)
+        
             }
                 // Else, defaultFile.plist does not exsist
             else    {
                 // Print Error Message to Console
                 println("Error: defaultFile.plist does not exsist. No file to copy")
+                
             }
-        }
-        
-        return path
+
     }
-    
-    
-    
-    
-    
+ 
+        return path
+
 }
 
-
-
-
+}
